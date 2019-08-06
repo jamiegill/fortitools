@@ -1,0 +1,18 @@
+name=IONOS-VTI ver=1 serial=2 98.191.42.29:0->208.94.37.153:0
+bound_if=7 lgwy=static/1 tun=intf/0 mode=auto/1 encap=none/8 options[0008]=npu 
+proxyid_num=1 child_num=0 refcnt=15 ilast=0 olast=0 ad=/0
+stat: rxp=285 txp=498 rxb=52492 txb=62764
+dpd: mode=on-demand on=1 idle=20000ms retry=3 count=0 seqno=58
+natt: mode=none draft=0 interval=0 remote_port=0
+proxyid=IONOS-VTI proto=0 sa=1 ref=13 serial=2
+  src: 0:0.0.0.0/0.0.0.0:0
+  dst: 0:0.0.0.0/0.0.0.0:0
+  SA:  ref=6 options=10202 type=00 soft=0 mtu=1438 expire=3015/0B replaywin=2048
+       seqno=1f3 esn=0 replaywin_lastseq=0000011d itn=0
+  life: type=01 bytes=0/0 timeout=3302/3600
+  dec: spi=7eff0b3d esp=aes key=32 d56f79f388fb72140f23a5e380b072de3f109d11fb3e90063a297192b1d1fa59
+       ah=sha256 key=32 d57b9b2d5950fc3d002b4e6f27df2d07bc66d72c0cd6673844a8c90374b18cc0
+  enc: spi=cb0cda22 esp=aes key=32 92e60af0524e6e5773685711df4ecc482b4d8d4ad2b627a270053d39f57cec61
+       ah=sha256 key=32 ec86bb66307dd59160007453ae200d0996a0c97403a07b3f36b77484ccbb068b
+  dec:pkts/bytes=285/31960, enc:pkts/bytes=498/98552
+  npu_flag=03 npu_rgwy=208.94.37.153 npu_lgwy=98.191.42.29 npu_selid=b dec_npuid=1 enc_npuid=1

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="pull-left" style="text-decoration: none;color: black">ESP Decrypt</h2>
+
+<form action="{{ url_for('get_sa') }}",  method="POST">
+    <div class="search_class" style="float:left">
+        <textarea rows="4" cols="250" id="tunnel_list_form" name="tunnel_list_form"></textarea>
+    </div>
+    <div class="search_class" style="float:left">
+        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+    </div>
+    <div>
+    
+    1) Paste contents of "diag vpn tunnel list" and click Submit<br>
+    2) Take the output and replace/append into WireShark SA file, typically located in C:\Users\[user]\AppData\Roaming\Wireshark\esp_sa <br>
+    3) Open .pcap file which should have ESP packets that need to be decrypted<br>
+
+    </div>
+</form>
+
+
+
+{% endblock %}
+
+
