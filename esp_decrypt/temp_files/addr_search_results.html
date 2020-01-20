@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+</style>
+
+
+
+
+<script>
+
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</head>
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+<h1> Address Objects </h1>
+<ul id="myUL">
+
+<!-- ######################  -->
+<!-- Insert query data here  -->
+<!-- ######################  -->
+
+<li><a href="#">none - <font color="green">0.0.0.0 255.255.255.255</font></a></li><li><a href="#">all - <font color="green">0.0.0.0/0</font></a></li><li><a href="#">GEO-France - <font color="green">FR</font></a></li><li><a href="#">GEO-US - <font color="green">US</font></a></li><li><a href="#">GEO-Canada - <font color="green">CA</font></a></li><li><a href="#">wildcard.dropbox.com - <font color="green">0.0.0.0/0</font></a></li><li><a href="#">wildcard.google.com - <font color="green">0.0.0.0/0</font></a></li><li><a href="#">gmail.com - <font color="green">gmail.com</font></a></li><li><a href="#">login.windows.net - <font color="green">login.windows.net</font></a></li><li><a href="#">login.microsoft.com - <font color="green">login.microsoft.com</font></a></li><li><a href="#">login.microsoftonline.com - <font color="green">login.microsoftonline.com</font></a></li><li><a href="#">Snet-L-Shaw-Routable - <font color="green">69.196.66.16 255.255.255.240</font></a></li><li><a href="#">Host-L-190-Shaw-Routable - <font color="green">64.141.87.190 255.255.255.255</font></a></li><li><a href="#">Host-L-189-SPARE - <font color="green">64.141.87.189 255.255.255.255</font></a></li><li><a href="#">Host-L-187-SPARE - <font color="green">64.141.87.187 255.255.255.255</font></a></li><li><a href="#">Host-L-181-DFT-Client - <font color="green">64.141.87.181 255.255.255.255</font></a></li><li><a href="#">Host-L-178-VCloud - <font color="green">64.141.87.178 255.255.255.255</font></a></li><li><a href="#">Host-L-179-EMS - <font color="green">64.141.87.179 255.255.255.255</font></a></li><li><a href="#">Host-L-184-DFT-RDS - <font color="green">64.141.87.184 255.255.255.255</font></a></li><li><a href="#">Host-L-182-MMJ - <font color="green">64.141.87.182 255.255.255.255</font></a></li><li><a href="#">Host-L-185-root - <font color="green">64.141.87.185 255.255.255.255</font></a></li><li><a href="#">Host-L-183-LigFW-RDS - <font color="green">64.141.87.183 255.255.255.255</font></a></li><li><a href="#">Host-L-186-ligmil - <font color="green">64.141.87.186 255.255.255.255</font></a></li><li><a href="#">Host-L-188-JCK - <font color="green">64.141.87.188 255.255.255.255</font></a></li><li><a href="#">Host-L-180-NMG - <font color="green">64.141.87.180 255.255.255.255</font></a></li><li><a href="#">all - <font color="green">0.0.0.0/0</font></a></li><li><a href="#">none - <font color="green">0.0.0.0 255.255.255.255</font></a></li><li><a href="#">FIREWALL_AUTH_PORTAL_ADDRESS - <font color="green">0.0.0.0/0</font></a></li><li><a href="#">FABRIC_DEVICE - <font color="green">0.0.0.0/0</font></a></li>
+<h1> Address Groups </h1>
+
+
+</ul>
+</html>

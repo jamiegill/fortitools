@@ -1,0 +1,16 @@
+config firewall address
+    edit "8.8.8.8"
+        set uuid da46118a-d9a1-51e9-2937-99e391d209f9
+        set subnet 8.8.8.8 255.255.255.255
+    next
+    edit "loop10 address"
+        set uuid 16d43ca0-daf9-51e9-c3e1-4d0bfd37dd11
+        set type interface-subnet
+        set subnet 198.185.165.1 255.255.255.0
+        set interface "loop10"
+    next
+    edit "146.20.53.70"
+        set uuid 748ba4cc-e0a4-51e9-dd5d-2580e0332694
+        set subnet 146.20.53.70 255.255.255.255
+    next
+end

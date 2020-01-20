@@ -1,0 +1,9 @@
+while 1
+    sendln 'get system status | grep time'
+    wait '#'
+    sendln 'diag test application dnsproxy 3'
+    wait '#'
+    sendln 'diag test application dnsproxy 2'
+    wait '#'
+    pause 3
+endwhile

@@ -20,6 +20,48 @@
     </div>
 </form>
 
+<br><br><br><br><br><br><br><br>
+<hr>
+
+<h2 class="pull-left" style="text-decoration: none;color: black">Teraterm Script Creator</h2>
+
+<form action="{{ url_for('get_teraterm') }}",  method="POST">
+    <div class="search_class" style="float:left">
+        <textarea rows="4" cols="250" id="teraterm_form" name="teraterm_form"></textarea>
+    </div>
+    <div class="search_class" style="float:left">
+        <input type="text" id="teraterm_sleep" name="teraterm_sleep" placeholder="Timeout(secs)"></textarea>
+    </div>
+    <div class="search_class" style="float:left">
+        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+    </div>
+    <div>
+    
+    1) Enter lines to be added to Teraterm Script<br>
+    2) Fill in a value for timeout and click Submit<br>
+
+
+    </div>
+</form>
+
+<br><br><br><br><br><br><br><br>
+<hr>
+
+
+
+<h2 class="pull-left" style="text-decoration: none;color: black">Address Object Parse</h2>
+
+<form action="{{ url_for('get_addr_obj') }}",  method="POST">
+    <div class="search_class" style="float:left">
+        <textarea rows="4" cols="250" id="addr_obj_form" name="addr_obj_form"></textarea>
+    </div>
+    <div class="search_class" style="float:left">
+        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+    </div>
+    
+    <div>1) copy/paste configuration and search for address objects<br></div>
+
+</form>
 
 
 {% endblock %}

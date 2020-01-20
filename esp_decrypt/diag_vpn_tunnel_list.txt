@@ -1,18 +1,19 @@
-name=IONOS-VTI ver=1 serial=2 98.191.42.29:0->208.94.37.153:0
-bound_if=7 lgwy=static/1 tun=intf/0 mode=auto/1 encap=none/8 options[0008]=npu 
-proxyid_num=1 child_num=0 refcnt=15 ilast=0 olast=0 ad=/0
-stat: rxp=285 txp=498 rxb=52492 txb=62764
-dpd: mode=on-demand on=1 idle=20000ms retry=3 count=0 seqno=58
+name=toFGT2 ver=1 serial=1 172.17.96.111:0->172.17.96.112:0 dst_mtu=1500
+bound_if=5 lgwy=static/1 tun=intf/0 mode=auto/1 encap=none/528 options[0210]=create_dev frag-rfc  accept_traffic=1
+
+proxyid_num=1 child_num=0 refcnt=17 ilast=2 olast=22 ad=/0
+stat: rxp=5 txp=905 rxb=600 txb=54300
+dpd: mode=on-demand on=1 idle=20000ms retry=3 count=0 seqno=11972
 natt: mode=none draft=0 interval=0 remote_port=0
-proxyid=IONOS-VTI proto=0 sa=1 ref=13 serial=2
+proxyid=toFGT2 proto=0 sa=1 ref=3 serial=2
   src: 0:0.0.0.0/0.0.0.0:0
   dst: 0:0.0.0.0/0.0.0.0:0
-  SA:  ref=6 options=10202 type=00 soft=0 mtu=1438 expire=3015/0B replaywin=2048
-       seqno=1f3 esn=0 replaywin_lastseq=0000011d itn=0
-  life: type=01 bytes=0/0 timeout=3302/3600
-  dec: spi=7eff0b3d esp=aes key=32 d56f79f388fb72140f23a5e380b072de3f109d11fb3e90063a297192b1d1fa59
-       ah=sha256 key=32 d57b9b2d5950fc3d002b4e6f27df2d07bc66d72c0cd6673844a8c90374b18cc0
-  enc: spi=cb0cda22 esp=aes key=32 92e60af0524e6e5773685711df4ecc482b4d8d4ad2b627a270053d39f57cec61
-       ah=sha256 key=32 ec86bb66307dd59160007453ae200d0996a0c97403a07b3f36b77484ccbb068b
-  dec:pkts/bytes=285/31960, enc:pkts/bytes=498/98552
-  npu_flag=03 npu_rgwy=208.94.37.153 npu_lgwy=98.191.42.29 npu_selid=b dec_npuid=1 enc_npuid=1
+  SA:  ref=3 options=10226 type=00 soft=0 mtu=1438 expire=17630/0B replaywin=1024
+       seqno=38a esn=0 replaywin_lastseq=00000006 itn=0 qat=0
+  life: type=01 bytes=0/0 timeout=42933/43200
+  dec: spi=e2a03950 esp=aes key=32 9f0346fb35b44b29fe87093defc3552e59e43af531437f7bedc6a9dd8edda964
+       ah=sha1 key=20 95d38c30b5c8bc32cb0ac7fc7da981a3b53870b7
+  enc: spi=c6e3d2e5 esp=aes key=32 663824af81e6cda2f5417467a95209867cdefdb41633a63b24f0ff395421aa19
+       ah=sha1 key=20 127245a8b879759ad4a9b6ae58df8510a3d81701
+  dec:pkts/bytes=5/300, enc:pkts/bytes=905/108600
+  npu_flag=00 npu_rgwy=172.17.96.112 npu_lgwy=172.17.96.111 npu_selid=8 dec_npuid=0 enc_npuid=0
